@@ -1,0 +1,36 @@
+<html>
+<body>
+</script><h2>TextBox value : <label id="msg"></label></h2>
+
+<div style="padding:16px;">
+	TextBox : <input type="textbox" value="Type something"></input>
+</div>
+
+<button id="Get">Get TextBox Value</button>
+<button id="Set">Set To "ABC"</button>
+<button id="Reset">Reset It</button>
+
+<script type="text/javascript">
+    $("button:#Get").click(function () {
+
+	$('#msg').html($('input:textbox').val());
+
+    });
+
+    $("button:#Reset").click(function () {
+
+	$('#msg').html("");
+	$('input:textbox').val("");
+
+    });
+
+    $("button:#Set").click(function () {
+
+	$('input:textbox').val("ABC");
+	$('#msg').html($('input:textbox').val());
+
+    });
+
+</script>
+
+</body>
